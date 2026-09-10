@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VELAIRE HOMES | Custom Drapery & Home</title>
+
+  <meta name="description" content="VELAIRE HOMES specializes in custom drapery for high ceilings, floor-to-ceiling windows, and elevated interiors.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #292723;
+      background: #f7f4ee;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 28px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      letter-spacing: 4px;
+      color: #292723;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #292723;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 8% 100px;
+      background:
+        linear-gradient(
+          rgba(247,244,238,0.78),
+          rgba(247,244,238,0.78)
+        ),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      color: #756b5e;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      font-size: clamp(55px, 8vw, 105px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 30px;
+    }
+
+    .hero h2 {
+      font-size: 18px;
+      font-weight: normal;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 560px;
+      font-size: 17px;
+      color: #5e584f;
+      margin-bottom: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #292723;
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #5b5145;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 110px 8%;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8a7d6d;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: 1.05;
+      margin-bottom: 30px;
+    }
+
+    .intro {
+      max-width: 700px;
+      font-size: 18px;
+      color: #625b51;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #ebe5db;
+    }
+
+    .service-grid {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: #cfc6b9;
+    }
+
+    .service {
+      background: #ebe5db;
+      padding: 50px 40px;
+    }
+
+    .service h3 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: 29px;
+      margin-bottom: 15px;
+    }
+
+    .service p {
+      color: #625b51;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 20px;
+    }
+
+    .gallery-image {
+      min-height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-image.small {
+      min-height: 240px;
+    }
+
+    .gallery-right {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .image-one {
+      background-image: url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85");
+    }
+
+    .image-two {
+      background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85");
+    }
+
+    .image-three {
+      background-image: url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85");
+    }
+
+    /* PROCESS */
+
+    .process {
+      background: #292723;
+      color: #f7f4ee;
+    }
+
+    .process .section-label {
+      color: #b9aa97;
+    }
+
+    .process-grid {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 35px;
+    }
+
+    .step-number {
+      font-family: Georgia, serif;
+      font-size: 45px;
+      color: #b9aa97;
+      margin-bottom: 15px;
+    }
+
+    .process h3 {
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .process p {
+      color: #c9c2b8;
+      font-size: 14px;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 130px 8%;
+    }
+
+    .cta .section-title {
+      max-width: 850px;
+      margin: 0 auto 35px;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 0 auto 35px;
+      color: #625b51;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 8%;
+      background: #ebe5db;
+      border-top: 1px solid #d4ccc0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #756b5e;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      nav {
+        padding: 22px 6%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 90vh;
+        padding: 130px 7% 80px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      section {
+        padding: 80px 7%;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-right {
+        grid-template-rows: 300px 300px;
+      }
+
+      .gallery-image {
+        min-height: 400px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="logo">VELAIRE HOMES</div>
+
+    <ul class="nav-links">
+      <li><a href="#drapery">Drapery</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Custom Home Interiors
+      </div>
+
+      <h1>
+        VELAIRE<br>
+        HOMES
+      </h1>
+
+      <h2>
+        Custom Drapery for High Ceilings
+      </h2>
+
+      <p>
+        Made-to-measure drapery designed for tall windows,
+        dramatic spaces, and beautifully elevated interiors.
+      </p>
+
+      <a href="#contact" class="button">
+        Request a Quote
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- INTRO -->
+
+  <section>
+
+    <div class="section-label">
+      Our Philosophy
+    </div>
+
+    <h2 class="section-title">
+      Designed for<br>
+      extraordinary spaces.
+    </h2>
+
+    <p class="intro">
+      VELAIRE HOMES specializes in custom floor-to-ceiling
+      drapery for homes with high ceilings and expansive windows.
+      Every detail is thoughtfully selected to complement the
+      architecture and character of your space.
+    </p>
+
+  </section>
+
+
+  <!-- DRAPERY -->
+
+  <section class="services" id="drapery">
+
+    <div class="section-label">
+      Custom Drapery
+    </div>
+
+    <h2 class="section-title">
+      Made for your home.
+    </h2>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <h3>Floor-to-Ceiling</h3>
+        <p>
+          Elegant drapery designed to emphasize height,
+          create balance, and bring softness to large spaces.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Blackout Drapery</h3>
+        <p>
+          Beautiful light control for bedrooms, media rooms,
+          and spaces where privacy and comfort matter.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Sheer Drapery</h3>
+        <p>
+          Soft, filtered light and an effortless layered look
+          for bright and open interiors.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Luxury Fabrics</h3>
+        <p>
+          Carefully selected linen, velvet, and specialty
+          fabrics available in a range of colors and textures.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+
+  <section id="gallery">
+
+    <div class="section-label">
+      Gallery
+    </div>
+
+    <h2 class="section-title">
+      Elevate the room.
+    </h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-image image-one"></div>
+
+      <div class="gallery-right">
+
+        <div class="gallery-image image-two small"></div>
+
+        <div class="gallery-image image-three small"></div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+
+  <section class="process" id="process">
+
+    <div class="section-label">
+      How It Works
+    </div>
+
+    <h2 class="section-title">
+      From your space<br>
+      to your windows.
+    </h2>
+
+    <div class="process-grid">
+
+      <div>
+        <div class="step-number">01</div>
+        <h3>Tell Us About Your Space</h3>
+        <p>
+          Share your window dimensions, ceiling height,
+          photos, and project details.
+        </p>
+      </div>
+
+      <div>
+        <div class="step-number">02</div>
+        <h3>Choose Your Style</h3>
+        <p>
+          Explore fabrics, colors, lining options,
+          and drapery styles.
+        </p>
+      </div>
+
+      <div>
+        <div class="step-number">03</div>
+        <h3>Receive Your Quote</h3>
+        <p>
+          We'll create a personalized quote
+          based on your project.
+        </p>
+      </div>
+
+      <div>
+        <div class="step-number">04</div>
+        <h3>Made for Your Home</h3>
+        <p>
+          Your custom drapery is made to your
+          exact specifications.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta" id="contact">
+
+    <div class="section-label">
+      Start Your Project
+    </div>
+
+    <h2 class="section-title">
+      Let's transform your windows.
+    </h2>
+
+    <p>
+      Tell us about your space and we'll be in touch
+      to discuss your custom drapery project.
+    </p>
+
+    <a href="mailto:hello@velairehomes.com" class="button">
+      Request a Quote
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="logo">
+      VELAIRE HOMES
+    </div>
+
+    <p>
+      © 2026 VELAIRE HOMES. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
